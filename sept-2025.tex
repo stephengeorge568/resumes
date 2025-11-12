@@ -1,0 +1,159 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Stephen George} & Email : \href{mailto:stephengeorge.work@gmail.com}{stephengeorge.work@gmail.com}\\
+  \href{https://github.com/stephengeorge568}{Github} & Mobile : (402) 359-0543 \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hudl}{Lincoln, NE}
+      {Software Engineer II}{April 2024 - Present}
+      \resumeItemListStart
+        \resumeItem{Entity Relationship Microservice}
+          {Architected and launched a .NET microservice managing entity relationships, supporting millions of requests per day and half a million relationships across Hudl's platform. Enabled onboarding of new user classes (e.g., Parents) and built an extensible foundation for any relationship type. Service has since been extended by 3 other teams to add additional features.}
+        \resumeItem{Custom Form Platform}
+          {Designed and developed a .NET microservice with reusable React components and TypeScript logic for dynamic form creation, rendering, and completion across Hudl's products. Created a plug-and-play solution with a generic, extensible architecture to support any future use case, starting with client data collection on Hudl's payments platform.}
+        \resumeItem{Calendar Event Filter Project}
+          {Owned development of a React-based tree filter panel enabling users to filter calendar events. Proactively identified early risks with tightly coupled UI components, then organized and led a multi-team decoupling effort, unblocking dependencies and ensuring successful, on-time delivery.}
+        \resumeItem{AI Development Tooling Leadership}
+          {Drove AI tooling adoption by authoring internal guides and leading org-wide workshops. Managed Claude Code proof-of-concept, tracking success metrics and cost analysis to evaluate impact and scalability for broader engineering team adoption.}
+        \resumeItem{Production Operations Manager}
+          {Managed production operations for 40+ engineers, organizing on-call rotations, preseason audits, and pushing for more efficient microservice resource allocation while responsibly balancing database connections, thread usage, AWS limitations, and more.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Hudl}{Lincoln, NE}
+      {Software Engineer I}{April 2023 - April 2024}
+      \resumeItemListStart
+        \resumeItem{iOS Video Upload Hotfix}
+          {Delivered critical hotfix for iOS video upload issue affecting thousands of events by identifying a cross-version defect in Objective-C/Swift pipeline; implemented fix with enhanced observability for future detection.}
+        \resumeItem{React Native Scoreboard Overlay}
+          {Built React Native frontend feature to manage scoreboard overlay in livestream for sports events.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Gallup}{Omaha, NE}
+      {Software Engineer Intern}{May 2022 - August 2022}
+      \resumeItemListStart
+        \resumeItem{Full Stack Development}
+          {Developed ETL application using C\#/.NET and SQL for sales lead generation and React application for food insecurity prediction.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Union Pacific}{Omaha, NE}
+      {Software Development Intern}{September 2020 - November 2021}
+      \resumeItemListStart
+        \resumeItem{Application Hosting Platform}
+          {Helped develop enterprise-wide Kubernetes-based hosting platform for all Union Pacific applications, replacing legacy infrastructure. Built Java microservices with SQL databases and Angular frontends, while maintaining legacy JSP projects during transition.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Monaco}
+      {Built a real-time collaborative editor supporting multiple concurrent users using websockets. Initially developed with Java, Angular, Spring Boot, and Docker, then later translated to C\# and React. Implemented operational transformation algorithm for conflict resolution and synchronization at scale. \href{https://github.com/stephengeorge568/monaco}{GitHub Repository} 2022}
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Nebraska - Omaha}{Omaha, NE}
+      {Bachelor of Science in Computer Science; Minors: Cybersecurity \& Mathematics}{August 2019- Dec 2022}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Technologies}{: C\#, Typescript, React, AWS, Git CLI, Docker, Linux, Terraform, GraphQL, MongoDB, Java, Spring Boot}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
